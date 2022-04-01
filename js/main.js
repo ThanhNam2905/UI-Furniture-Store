@@ -57,3 +57,16 @@ function Prev() {
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active');
 }
+
+// Loading Page 
+let pageLoading = document.querySelector('#loading-page');
+
+function loading() {
+    pageLoading.classList.add('active');
+}
+
+function fadeOut() {
+    setInterval(loading, 3000);
+}
+
+window.onload = fadeOut();
